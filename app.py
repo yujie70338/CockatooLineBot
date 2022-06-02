@@ -33,7 +33,7 @@ def callback():
 # 當收到LINE的MessageEvent(信息事件)，而且信息是屬於TextMessage，執行。
 # LINE的事件有：MessageEvent(信息事件)、FollowEvent(加好友事件)、UnfollowEvent(刪好友事件)、JoinEvent(加入聊天室事件)、LeaveEvent(離開聊天室事件)、MemberJoinedEvent(加入群組事件)、MemberLeftEvent(離開群組事件)
 
-def echo(event): #echo函數會接收一個LINE發送過來的資訊，並貼上event的標籤。
+def echo(event): # echo函數會接收一個LINE發送過來的資訊，並貼上event的標籤。
     
     if event.source.user_id != "Udeadbeefdeadbeefdeadbeefdeadbeef": # 如果是Line官方傳的測試訊息，就不回應
         line_bot_api.reply_message(
